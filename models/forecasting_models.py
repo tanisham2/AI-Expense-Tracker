@@ -10,8 +10,8 @@ def run_prophet_forecast(df, periods=30):
     except ImportError:
         return None, "Prophet not installed. Run: pip install prophet"
 
-    if df.empty or len(df) < 10:
-        return None, "Need at least 10 data points for forecasting."
+    if df.empty or len(df) < 5:
+        return None, "Need at least 5 data points for forecasting."
 
     try:
         ts = df[['ds', 'y']].copy()
@@ -43,8 +43,8 @@ def run_xgboost_forecast(df, periods=30):
     except ImportError:
         return None, "XGBoost not installed. Run: pip install xgboost"
 
-    if df.empty or len(df) < 14:
-        return None, "Need at least 14 data points for XGBoost forecasting."
+    if df.empty or len(df) < 10:
+        return None, "Need at least 10 data points for XGBoost forecasting."
 
     try:
         ts = df[['ds', 'y']].copy()
