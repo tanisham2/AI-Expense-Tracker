@@ -26,7 +26,7 @@ class ChangePasswordRequest(BaseModel):
 class UserResponse(BaseModel):
     id: int
     name: str
-    email: str
+    email: EmailStr
     currency: str
 
     class Config:
