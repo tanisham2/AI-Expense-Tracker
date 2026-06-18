@@ -9,7 +9,7 @@ CATEGORIES = [
     "Investments", "Subscriptions", "Gifts", "Other"
 ]
 
-PAYMENT_MODES = ["Cash", "Credit Card", "Debit Card", "UPI", "Net Banking", "Wallet", "EMI"]
+PAYMENT_MODES = ["Cash", "UPI", "Credit Card", "Debit Card", "EMI"]
 
 CATEGORY_COLORS = {
     "Food & Dining": "#ff6b6b",

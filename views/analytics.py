@@ -3,8 +3,7 @@ import pandas as pd
 import numpy as np
 from database.db_manager import get_expenses
 from utils.helpers import format_currency, CATEGORY_COLORS
-from utils.charts import (spending_heatmap, category_trend_chart,
-                          spending_distribution_chart, monthly_trend_chart)
+from utils.charts import (spending_heatmap, category_trend_chart, spending_distribution_chart, monthly_trend_chart)
 
 def show_analytics():
     st.markdown("""
@@ -26,8 +25,7 @@ def show_analytics():
     df['weekday'] = df['date'].dt.day_name()
     df['is_weekend'] = df['date'].dt.dayofweek >= 5
     df['week'] = df['date'].dt.isocalendar().week.astype(int)
-
-    # Auto-generated insights
+    
     st.markdown("<div class='section-header'>🔍 Auto-Generated Insights</div>", unsafe_allow_html=True)
 
     monthly_totals = df.groupby('month')['amount'].sum()
