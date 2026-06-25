@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = "https://fintrack-ai-api.onrender.com"
 
 def get_headers():
     token = st.session_state.get("access_token", "")
@@ -33,7 +33,7 @@ def api_get(endpoint, params=None):
         r.raise_for_status()
         return r.json()
     except requests.exceptions.ConnectionError:
-        st.error("❌ Cannot connect to backend. Make sure FastAPI is running on port 8000.")
+        st.error("❌ Cannot connect to backend. Make sure FastAPI is running on Render.")
         return None
     except Exception as e:
         st.error(f"API Error: {e}")
