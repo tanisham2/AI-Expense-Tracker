@@ -42,3 +42,15 @@ Provides interactive dashboards and visualizations through Streamlit.
 * Personalized saving recommendations
 * Real-time expense tracking
 * Mobile application support
+  
+
+## Live Demo
+
+Frontend:
+https://fintrack-ai-app.streamlit.app/
+
+Backend API:
+https://fintrack-ai-api.onrender.com
+
+API Documentation:
+https://fintrack-ai-api.onrender.com/docs
